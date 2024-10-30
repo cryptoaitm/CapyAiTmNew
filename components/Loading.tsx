@@ -170,15 +170,15 @@ export default function Loading({ setIsInitialized, setCurrentView }: LoadingPro
       }}
     >
         <Link href={'https://x.com/RealCapyHouse'} target="_blank">
-        <Image src={twitter} alt="Exchange" className="w-14 h-14 animate-pulse delay-100" />
+        <Image src={twitter} alt="Exchange" className="w-12 h-12 animate-pulse delay-100" />
         </Link>
        
         <Link href={'https://youtube.com/'}>
-        <Image src={youtube} alt="Exchange" className="w-14 h-14 animate-pulse delay-100 mx-4"/>
+        <Image src={youtube} alt="Exchange" className="w-12 h-12 animate-pulse delay-100 mx-4"/>
         </Link>
       
         <Link href={'https://t.me/Capy_CommunityBot'}>
-        <Image src={telegram} alt="Exchange" className="w-14 h-14 animate-pulse delay-100"/>
+        <Image src={telegram} alt="Exchange" className="w-12 h-12 animate-pulse delay-100"/>
         </Link>
        
     </div>
