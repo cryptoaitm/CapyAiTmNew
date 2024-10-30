@@ -54,9 +54,9 @@ export function PointSynchronizer() {
             console.log("Data from server: ", data);
 
             resetUnsynchronizedPoints(pointsToSync);
-            //showToast(`Successfully synchronized! Points synced: ${pointsToSync}`, 'success');
+            showToast(`Successfully synchronized! Points synced: ${pointsToSync}`, 'success');
         } catch (error) {
-            showToast(`Error syncing with server: ${error instanceof Error ? error.message : String(error)}`, 'error');
+            // showToast(`Error syncing with server: ${error instanceof Error ? error.message : String(error)}`, 'error');
             console.error('Error syncing with server:', error);
         } finally {
             setIsSyncing(false);
@@ -73,7 +73,7 @@ export function PointSynchronizer() {
             if (unsynchronizedPoints > 1) {
                 syncWithServer();
             }
-        }, 2000);
+        }, 1000);
 
         return () => {
             if (syncTimeoutRef.current) {
