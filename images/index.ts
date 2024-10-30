@@ -37,6 +37,7 @@ import rankingTwo  from "./rankingTwo.png";
 import rankingThree from "./rankingThree.png";
 import chatbot from "./chatbot.png";
 import start from "./start-button.png";
+import suiWallet from "./sui.png";
 
 export {
     hamsterExchange,
@@ -77,7 +78,8 @@ export {
     rankingTwo,  
     rankingThree,
     chatbot,
-    start
+    start,
+    suiWallet
 };
 
 export const imageMap: Record<string, any> = {
@@ -117,5 +119,6 @@ export const imageMap: Record<string, any> = {
     rankingTwo,  
     rankingThree,
     chatbot,
-    start
+    start,
+    suiWallet
 };
