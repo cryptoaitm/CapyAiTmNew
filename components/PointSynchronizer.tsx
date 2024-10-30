@@ -73,7 +73,7 @@ export function PointSynchronizer() {
             if (unsynchronizedPoints > 1) {
                 syncWithServer();
             }
-        }, 1000);
+        }, 5000);
 
         return () => {
             if (syncTimeoutRef.current) {
