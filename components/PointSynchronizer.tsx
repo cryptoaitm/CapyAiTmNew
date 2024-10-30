@@ -3,6 +3,7 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
 import { useGameStore } from '@/utils/game-mechanics';
 import { useToast } from '@/contexts/ToastContext';
+import "../app/globals.css";
 
 export function PointSynchronizer() {
     const showToast = useToast();
@@ -56,7 +57,7 @@ export function PointSynchronizer() {
             resetUnsynchronizedPoints(pointsToSync);
             showToast(`Successfully synchronized! Points synced: ${pointsToSync}`, 'success');
         } catch (error) {
-            showToast(`Error syncing with server: ${error instanceof Error ? error.message : String(error)}`, 'error');
+            // showToast(`Error syncing with server: ${error instanceof Error ? error.message : String(error)}`, 'error');
             console.error('Error syncing with server:', error);
         } finally {
             setIsSyncing(false);
@@ -73,7 +74,7 @@ export function PointSynchronizer() {
             if (unsynchronizedPoints > 1) {
                 syncWithServer();
             }
-        }, 300);
+        }, 2000);
 
         return () => {
             if (syncTimeoutRef.current) {
