@@ -21,7 +21,7 @@ export function PointSynchronizer() {
         if (unsynchronizedPoints < 1 || isSyncing) return;
         setIsSyncing(true);
         const pointsToSync = unsynchronizedPoints;
-        const syncTimestamp = new Date.now();
+        // const syncTimestamp = Date.now();
         showToast(`Trying to synchronize ${pointsToSync}`, 'success');
 
         try {
@@ -29,7 +29,7 @@ export function PointSynchronizer() {
                 initData: userTelegramInitData,
                 unsynchronizedPoints: pointsToSync,
                 currentEnergy: energy,
-                syncTimestamp,
+                // syncTimestamp,
             });
 
             const response = await fetch('/api/sync', {
@@ -41,7 +41,7 @@ export function PointSynchronizer() {
                     initData: userTelegramInitData,
                     unsynchronizedPoints: pointsToSync,
                     currentEnergy: energy,
-                    syncTimestamp,
+                    // syncTimestamp,
                 }),
             }); 
             
