@@ -13,7 +13,6 @@ import { useToast } from '@/contexts/ToastContext';
 import IceCube from '@/icons/IceCube';
 import { Address } from "@ton/core";
 
-
 // ----------------------------------
 import {
     ConnectButton,
