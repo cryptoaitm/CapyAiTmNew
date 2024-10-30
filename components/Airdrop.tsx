@@ -265,7 +265,7 @@ export default function Airdrop() {
                                              CapyAi
                                         </div> 
                                         <div>
-                                        <Image src={start} alt="Task Image" width={50} height={40} className="bg-white px-1  rounded-lg mr-2" />
+                                        <Image src={start} alt="Task Image" width={50} height={40} className="px-1  rounded-lg mr-2" />
                                         </div>
                                     </button>
                                     
