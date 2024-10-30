@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { chatbot, mainCharacter, paidTrophy1, start, tonWallet } from '@/images';
+import { chatbot, mainCharacter, paidTrophy1, start, suiWallet, tonWallet } from '@/images';
 import { useTonConnectUI } from '@tonconnect/ui-react';
 import Angle from '@/icons/Angle';
 import Copy from '@/icons/Copy';
@@ -216,7 +216,7 @@ export default function Airdrop() {
                                         disabled={false}
                                     >
                                         <div className="flex items-center">
-                                            <Image src={tonWallet} alt="Ton wallet" width={40} height={40} className="rounded-lg " />
+                                            <Image src={suiWallet} alt="Ton wallet" width={40} height={40} className="rounded-lg " />
                                             <div className="flex flex-col">
                                                 <span className="font-medium">
                                                 <WalletProvider >
