@@ -44,7 +44,7 @@ export function PointSynchronizer() {
                     syncTimestamp,
                 }),
             });
-
+            resetUnsynchronizedPoints(pointsToSync);
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(`Failed to sync with server: ${errorData.error || response.statusText}`);
@@ -53,7 +53,7 @@ export function PointSynchronizer() {
             const data = await response.json();
             console.log("Data from server: ", data);
 
-            resetUnsynchronizedPoints(pointsToSync);
+            // resetUnsynchronizedPoints(pointsToSync);
             showToast(`Successfully synchronized! Points synced: ${pointsToSync}`, 'success');
         } catch (error) {
             // showToast(`Error syncing with server: ${error instanceof Error ? error.message : String(error)}`, 'error');
