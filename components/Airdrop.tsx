@@ -254,10 +254,10 @@ export default function Airdrop() {
                                     </div>
                                 )}
                                 <Link href={"https://capy-ai-bot-x-ztub.vercel.app/"}>
-                                <h2 className="text-base mt-8 mb-4">Tasks</h2>
+                                <h2 className="text-base mt-8 mb-4">Capy Ai</h2>
                                 <div className="space-y-2">
                                     <button 
-                                    className="w-full flex justify-between items-center bg-[#272a2f] rounded-lg p-4"
+                                    className="w-full flex justify-between items-center bg-gradient-to-br from-purple-950 via-zinc-950 to-purple-950 rounded-lg p-4"
                                     onClick={handleCapyAiClicked}
                                     >
                                         <div className="flex items-center">
