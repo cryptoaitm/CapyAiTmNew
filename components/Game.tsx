@@ -194,7 +194,7 @@ export default function Game({ currentView, setCurrentView }: GameProps) {
           }}
           onAnimationEnd={() => handleAnimationEnd(click.id)}
         >
-          {pointsPerClick}<IceCube className="w-12 h-12 mx-auto" />
+          {pointsPerClick}<Image src={mainCharacter}  alt="Exchange" width={40} height={40} />
         </div>
       ))}
     </div>

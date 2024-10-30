@@ -22,7 +22,8 @@ const useFetchTasks = (userTelegramInitData: string) => {
           throw new Error('Failed to fetch tasks');
         }
         const data = await response.json();
-        setTasks(data.tasks);
+        const dataReverse = data.tasks.reverse();
+        setTasks(dataReverse);
       } catch (error) {
         console.error('Error fetching tasks:', error);
       } finally {

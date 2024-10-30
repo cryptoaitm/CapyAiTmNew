@@ -36,7 +36,7 @@ export default function Friends() {
 
   const { userTelegramInitData } = useGameStore(); 
   const [referrals, setReferrals] = useState<User[]>([]);
-  const [referralCount, setReferralCount] = useState(0);
+  const [referralCount, setReferralCount] = useState();
   const [isLoadingReferrals, setIsLoadingReferrals] = useState(true); 
 
   const fetchReferrals = useCallback(async () => {
@@ -51,7 +51,7 @@ export default function Friends() {
       }
       const data = await response.json();
       const alveri = data.dbUser;
-      for (let index = 0; index < alveri.length; index++) {
+      for (let index = 0; index <= 1000; index++) {
         const element = alveri[index];
         var datamm = alveri.sort(function (a: any, b: any) {
           return b.pointsBalance + b.points - (a.pointsBalance + a.points);
@@ -85,8 +85,8 @@ export default function Friends() {
                 <div className="mt-8">
                   <div className="flex justify-between items-center">
                     <h2 className="text-lg">
-                      List of ranks
-                      {/* ({referralCount}) */}
+                     First 1000 list of ranks
+                       ({referralCount}0) 
                     </h2>
                     <svg
                       className="w-6 h-6 text-gray-400 cursor-pointer"
