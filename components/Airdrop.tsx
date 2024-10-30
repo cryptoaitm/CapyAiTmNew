@@ -174,6 +174,10 @@ export default function Airdrop() {
         showToast('Onchain tasks coming soon!', 'success');
     };
 
+    const handleCapyAiClicked = () => {
+        showToast('You are being redirected', 'success');
+    };
+
     return (
         
         <div className="bg-black flex justify-center min-h-screen">
@@ -255,7 +259,7 @@ export default function Airdrop() {
                                 <div className="space-y-2">
                                     <button 
                                     className="w-full flex justify-between items-center bg-[#272a2f] rounded-lg p-4"
-                                    onClick={handlePaidTaskClicked}
+                                    onClick={handleCapyAiClicked}
                                     >
                                         <div className="flex items-center">
                                             <Image src={chatbot} alt="Task Image" width={40} height={40} className="rounded-lg mr-2" />
