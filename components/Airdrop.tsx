@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { mainCharacter, paidTrophy1, tonWallet } from '@/images';
+import { chatbot, mainCharacter, paidTrophy1, start, tonWallet } from '@/images';
 import { useTonConnectUI } from '@tonconnect/ui-react';
 import Angle from '@/icons/Angle';
 import Copy from '@/icons/Copy';
@@ -34,6 +34,7 @@ import {
     AllDefaultWallets,
     defineStashedWallet
 } from '@suiet/wallet-kit'; 
+import Link from 'next/link';
    
  
 
@@ -249,25 +250,24 @@ export default function Airdrop() {
                                         </button>
                                     </div>
                                 )}
-                                {/* <h2 className="text-base mt-8 mb-4">Tasks</h2>
+                                <Link href={"https://capy-ai-bot-x-ztub.vercel.app/"}>
+                                <h2 className="text-base mt-8 mb-4">Tasks</h2>
                                 <div className="space-y-2">
                                     <button 
                                     className="w-full flex justify-between items-center bg-[#272a2f] rounded-lg p-4"
                                     onClick={handlePaidTaskClicked}
                                     >
                                         <div className="flex items-center">
-                                            <Image src={paidTrophy1} alt="Task Image" width={40} height={40} className="rounded-lg mr-2" />
-                                            <div className="flex flex-col">
-                                                <span className="font-medium">Capy Age Advancement</span>
-                                                <div className="flex items-center">
-                                                    <IceCube className="w-6 h-6 mr-1" />
-                                                    <span className="text-white">+500K</span>
-                                                </div>
-                                            </div>
+                                            <Image src={chatbot} alt="Task Image" width={40} height={40} className="rounded-lg mr-2" />
+                                             CapyAi
+                                        </div> 
+                                        <div>
+                                        <Image src={start} alt="Task Image" width={50} height={40} className="bg-white px-1  rounded-lg mr-2" />
                                         </div>
-                                        0.5 Capy
                                     </button>
-                                </div> */}
+                                    
+                                </div>  
+                                </Link>
                             </div>
                         </div>
                     </div>

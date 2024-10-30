@@ -35,7 +35,8 @@ import cpu from "./cpu.png";
 import rankingOne  from "./rankingOne.png";
 import rankingTwo  from "./rankingTwo.png";
 import rankingThree from "./rankingThree.png";
-
+import chatbot from "./chatbot.png";
+import start from "./start-button.png";
 
 export {
     hamsterExchange,
@@ -74,7 +75,9 @@ export {
     cpu,
     rankingOne, 
     rankingTwo,  
-    rankingThree
+    rankingThree,
+    chatbot,
+    start
 };
 
 export const imageMap: Record<string, any> = {
@@ -112,5 +115,7 @@ export const imageMap: Record<string, any> = {
     cpu,
     rankingOne, 
     rankingTwo,  
-    rankingThree
+    rankingThree,
+    chatbot,
+    start
 };
