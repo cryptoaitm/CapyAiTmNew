@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -141,9 +142,10 @@ html, body {
 
 /* Loading */
 .loading {
-  font-size: 84px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  font-size: 70px;
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal; 
   text-align: center;
   text-shadow: 4px 4px 6px rgba(66, 68, 90, 1)
 }
