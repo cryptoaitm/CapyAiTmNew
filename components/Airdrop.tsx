@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { chatbot, mainCharacter, paidTrophy1, start, suiWallet, tonWallet } from '@/images';
+import { bot, chatbot, mainCharacter, paidTrophy1, start, suiWallet, tonWallet } from '@/images';
 import { useTonConnectUI } from '@tonconnect/ui-react';
 import Angle from '@/icons/Angle';
 import Copy from '@/icons/Copy';
@@ -13,9 +13,10 @@ import { useToast } from '@/contexts/ToastContext';
 import IceCube from '@/icons/IceCube';
 import { Address } from "@ton/core";
 
+
 // ----------------------------------
 import {
-    ConnectButton,
+    // ConnectButton,
     useAccountBalance,
     useWallet,
     SuiChainId,
@@ -40,7 +41,7 @@ import Link from 'next/link';
 
 
 
-
+import { ConnectButton } from '@mysten/dapp-kit';
 // ---------------------- 
 export default function Airdrop() {
     const [tonConnectUI] = useTonConnectUI();
@@ -190,78 +191,18 @@ export default function Airdrop() {
                                 </div>
                                 <h1 className="text-2xl text-center mb-4">Airdrop Tasks</h1>
                                 <p className="text-gray-300 text-center mb-4 font-normal">There is a list of challenges below. Complete them to qualify for the Airdrop.</p>
-                                <h2 className="text-base mt-8 mb-4">Wallet</h2>
+                                <h2 className="text-base mt-8 mb-4">Wallet</h2> 
                                 
- 
-                                    
-                                     
-
                                 
-
-                                {isLoading ? (
-                                    <div className="flex justify-between items-center bg-[#272a2f] rounded-lg p-4 w-full">
-                                        <div className="flex items-center">
-                                            <div className="w-10 h-10 bg-gray-300 rounded-lg animate-pulse mr-2"></div>
-                                            <div className="flex flex-col">
-                                                <div className="w-32 h-4 bg-gray-300 rounded animate-pulse"></div>
-                                            </div>
-                                        </div>
-                                        <div className="w-20 h-8 bg-gray-300 rounded animate-pulse"></div>
-                                    </div>
-                                ) : !tonWalletAddress ? (
-                                    <button 
-                                        // onClick={handleWalletAction}
-                                        className="flex justify-between items-center bg-[#319ee0] rounded-lg p-4 cursor-pointer w-full"
-                                        disabled={false}
-                                    >
-                                        <div className="flex items-center">
-                                            <Image src={suiWallet} alt="Ton wallet" width={40} height={40} className="rounded-lg " />
-                                            <div className="flex flex-col">
-                                                <span className="font-medium">
-                                                <WalletProvider >
-                                                    <ConnectButton style={{background:"rgba(0,0,0,0)",width:"100%"}}/>
-                                                    </WalletProvider>
-                                                </span>
-                                            </div>
-                                        </div> 
-                                        <Angle size={42} className="text-white" />
-                                    </button>
-                                    
-                                ) : (
-                                    <div className="flex gap-2">
-                                        <button
-                                            onClick={handleWalletAction}
-                                            className="w-12 h-12 bg-[#33363b] rounded-lg text-white font-bold flex items-center justify-center"
-                                            disabled={isLoading}
-                                        >
-                                            <Cross className="text-[#8b8e93]" />
-                                        </button>
-                                        <button
-                                            onClick={copyToClipboard}
-                                            className="flex-grow justify-between py-3 bg-[#33363b] rounded-lg text-white font-medium"
-                                            disabled={isLoading}
-                                        >
-                                            <div className="w-full flex justify-between px-4 items-center">
-                                                <div className="flex items-center gap-2">
-                                                    <Wallet className="text-[#8b8e93]" />
-                                                    <span>{formatAddress(tonWalletAddress)}</span>
-                                                </div>
-                                                <div>
-                                                    <Copy className="text-[#8b8e93]" />
-                                                </div>
-                                            </div>
-                                        </button>
-                                    </div>
-                                )}
                                 <Link href={"https://capy-ai-bot-x-ztub.vercel.app/"}>
                                 <h2 className="text-base mt-8 mb-4">Capy Ai</h2>
                                 <div className="space-y-2">
                                     <button 
-                                    className="w-full flex justify-between items-center bg-gradient-to-br from-purple-950 via-zinc-950 to-purple-950 rounded-lg p-4"
+                                    className="w-full flex justify-between items-center bg-gradient-to-br from-sky-400 via-sky-700 to-sky-950 rounded-lg p-4"
                                     onClick={handleCapyAiClicked}
                                     >
                                         <div className="flex items-center">
-                                            <Image src={chatbot} alt="Task Image" width={40} height={40} className="rounded-lg mr-2" />
+                                            <Image src={bot} alt="Task Image" width={40} height={40} className="rounded-lg mr-2" />
                                              CapyAi
                                         </div> 
                                         <div>
@@ -271,6 +212,7 @@ export default function Airdrop() {
                                     
                                 </div>  
                                 </Link>
+                                <ConnectButton />
                             </div>
                         </div>
                     </div>
